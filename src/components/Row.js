@@ -3,7 +3,7 @@ import React, { PropTypes } from 'react';
 import createProps from '../createProps';
 import { ViewportSizeType } from '../types';
 
-const rowKeys = ['start', 'center', 'end', 'top', 'middle', 'bottom', 'around', 'between'];
+const rowKeys = ['flb-start', 'flb-center', 'flb-end', 'flb-top', 'flb-middle', 'flb-bottom', 'flb-around', 'flb-between'];
 
 const propTypes = {
   reverse: PropTypes.bool,
@@ -21,7 +21,7 @@ const propTypes = {
 };
 
 function getRowClassNames(props) {
-  const modificators = [props.className, getClass('row')];
+  const modificators = [props.className, getClass('flb-row')];
 
   for (let i = 0; i < rowKeys.length; ++i) {
     const key = rowKeys[i];
@@ -32,7 +32,7 @@ function getRowClassNames(props) {
   }
 
   if (props.reverse) {
-    modificators.push(getClass('reverse'));
+    modificators.push(getClass('flb-reverse'));
   }
 
   return modificators;

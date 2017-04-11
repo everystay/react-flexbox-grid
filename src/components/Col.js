@@ -20,14 +20,14 @@ const propTypes = {
 };
 
 const classMap = {
-  xs: 'col-xs',
-  sm: 'col-sm',
-  md: 'col-md',
-  lg: 'col-lg',
-  xsOffset: 'col-xs-offset',
-  smOffset: 'col-sm-offset',
-  mdOffset: 'col-md-offset',
-  lgOffset: 'col-lg-offset'
+  xs: 'flb-col-xs',
+  sm: 'flb-col-sm',
+  md: 'flb-col-md',
+  lg: 'flb-col-lg',
+  xsOffset: 'flb-col-xs-offset',
+  smOffset: 'flb-col-sm-offset',
+  mdOffset: 'flb-col-md-offset',
+  lgOffset: 'flb-col-lg-offset'
 };
 
 function isInteger(value) {
@@ -42,11 +42,11 @@ function getColClassNames(props) {
   }
 
   if (props.first) {
-    extraClasses.push(getClass('first-' + props.first));
+    extraClasses.push(getClass('flb-first-' + props.first));
   }
 
   if (props.last) {
-    extraClasses.push(getClass('last-' + props.last));
+    extraClasses.push(getClass('flb-last-' + props.last));
   }
 
   return Object.keys(props)
